@@ -3,11 +3,11 @@
     <link rel="stylesheet" type="text/css" href="./chatlist.less">
 </head>
 <body>
-<div class="pagecontainer">
+<div class="page-container">
     <div class="block-left">
         <div class="settings-block">
             <div class="settings-block_profile">
-                <a href="../../pages/profile/profile.hbs">Профиль</a>
+                <a class="settings-block_profile-link" href="../../pages/profile/profile.hbs">Профиль</a>
             </div>
 
             <div class="settings-block_search">
@@ -15,35 +15,7 @@
             </div>
         </div>
         <div class="chatlist">
-            {{#each chatList.chatlist}}
-                <div class="chatlist-chatitem">
-                    <div class="chatlist-chatitem_logo">
-                        <img src="../../../static/chat-logo.png" height="60px" width="60px" alt="chat-logo">
-                    </div>
-
-                    <div class="chatlist-chatitem_textcontainer">
-                        <div class="chatlist-chatitem_title">
-                            {{title}}
-                        </div>
-                        <div class="chatlist-chatitem_message">
-                            {{message}}
-                        </div>
-                    </div>
-
-                    <div class="chatlist-chatitem_info">
-                        <div class="chatlist-chatitem_info-messagetime">
-                            {{time}}
-                        </div>
-
-                        {{#if hasNewMessages}}
-                            <div class="chatlist-chatitem_info-messagescount">
-                                {{messagecount}}
-                            </div>
-                        {{/if}}
-                    </div>
-
-                </div>
-            {{/each}}
+            {{> chats}}
         </div>
     </div>
 

@@ -13,20 +13,9 @@
         </div>
         <form>
             <div class="profile-form">
-                <label class="profile-form-label">Почта</label>
-                <input class="profile-form-input" type="email" name='email' value={{settings.profile.email}}>
-                <label class="profile-form-label">Логин</label>
-                <input class="profile-form-input" type="text" name='login' value={{settings.profile.login}}>
-                <label class="profile-form-label">Отображаемое имя</label>
-                <input class="profile-form-input" type="text" name='display_name' value={{settings.profile.display_name}}>
-                <label class="profile-form-label">Имя</label>
-                <input class="profile-form-input" type="text" name='first_name' value={{settings.profile.first_name}}>
-                <label class="profile-form-label">Фамилия</label>
-                <input class="profile-form-input" type="text" name='second_name' value={{settings.profile.second_name}}>
-                <label class="profile-form-label">Телефон</label>
-                <input class="profile-form-input" type="tel" name='phone' value={{settings.profile.phone}}>
+                {{> profileinput}}
             </div>
-            <a href="../password/password.hbs">Сменить пароль</a>
+            <a class="profile-form-link" href="../password/password.hbs">Сменить пароль</a>
         </form>
         <div class="profile-button">
             <input class='form-button' type="submit" value="Сменить пароль">
