@@ -1,9 +1,12 @@
+@link-color: #1f1f1f;
+@menu-color: #ffffff;
+
 body {
   margin: 0;
   padding: 0;
 }
 
-.pagecontainer {
+.page-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -13,16 +16,16 @@ body {
 
 .menu {
   display: flex;
-  background: #ffffff;
+  background: @menu-color;
   align-items: center;
   justify-content: space-around;
   min-width: 820px;
 
-  a {
+  .routes {
     margin: 30px 30px;
     font-size: 18px;
     text-decoration: none;
-    color: #1f1f1f;
+    color: @link-color;
     border-bottom: 1px solid transparent;
   }
 }

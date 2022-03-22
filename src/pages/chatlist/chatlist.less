@@ -1,8 +1,16 @@
+@border-color: #e2e2e2;
+@info-color: #f6f6f6;
+@messagelist-right-color: #e4edfd;
+@messagelist-left-color: #e7e7e7;
+@chatlist-block-color: #fbfbfb;
+@settings-chat-color: #808080;
+@chatname-color: #1e1e1e;
+
 body {
     margin: 0;
     padding: 0;
 }
-.pagecontainer {
+.page-container {
     display: flex;
     width: 100%;
     height: 100vh;
@@ -11,7 +19,7 @@ body {
 .block-left {
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #e2e2e2;
+    border-right: 1px solid @border-color;
 }
 .settings-block_profile {
     min-height: 56px;
@@ -19,38 +27,38 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
-    background: #f6f6f6;
+    background: @info-color;
 }
-a {
+.settings-block_profile-link {
     text-decoration: none;
-    color: #808080;
+    color: @settings-chat-color;
 }
 
 .settings-block_search {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid @border-color;
     padding: 0 10px 15px 10px;
-    background: #f6f6f6;
+    background: @info-color;
 }
 .settings-block_search-input {
     width: 100%;
     height: 32px;
     border: none;
-    background: #e2e2e2;
+    background: @border-color;
     padding: 0 10px;
 }
 
 .chatlist {
     min-width: 400px;
-    background-color: #fbfbfb;
+    background-color: @chatlist-block-color;
     display: flex;
     flex-direction: column;
     overflow: auto;
 }
 .chatlist-chatitem {
     height: 100px;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid @border-color;
     display: flex;
  }
 
@@ -74,7 +82,7 @@ img {
 }
 
 .chatlist-chatitem_message {
-    color: #808080;
+    color: @settings-chat-color;
     overflow: hidden;
     line-height: 20px;
     display: -webkit-box;
@@ -89,17 +97,17 @@ img {
     width: 30px;
 }
 .chatlist-chatitem_info-messagetime {
-    color: #808080;
+    color: @settings-chat-color;
     font-size: 12px;
 }
 
 .chatlist-chatitem_info-messagescount {
-    background-color: #e2e2e2;
+    background-color: @border-color;
     text-align: center;
 }
 
 .block-right {
-    background-color: #fbfbfb;
+    background-color: @chatlist-block-color;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -108,8 +116,8 @@ img {
     display: flex;
     align-items: center;
     min-height: 56px;
-    border-bottom: 1px solid #e2e2e2;
-    background: #f6f6f6;
+    border-bottom: 1px solid @border-color;
+    background: @info-color;
 }
 .profile-info_logo {
     padding: 0 10px 0 20px;
@@ -118,7 +126,7 @@ img {
 .profile-info_chatname {
     width: 100%;
     font-weight: bold;
-    color: #1e1e1e;
+    color: @chatname-color;
 }
 .messagelist {
     height: 100%;
@@ -129,7 +137,7 @@ img {
     flex-direction: column;
 }
 .messagelist_left {
-    background: #e7e7e7;
+    background: @messagelist-left-color;
     padding: 10px;
     width: 400px;
     align-self: flex-start;
@@ -137,7 +145,7 @@ img {
 }
 
 .messagelist_right {
-    background: #e4edfd;
+    background: @messagelist-right-color;
     padding: 10px;
     width: 400px;
     align-self: flex-end;
@@ -146,8 +154,8 @@ img {
 
 .send-message-block {
     min-height: 56px;
-    background-color: #f6f6f6;
-    border-top: 1px solid #e2e2e2;
+    background-color: @info-color;
+    border-top: 1px solid @border-color;
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -157,12 +165,12 @@ img {
     width: 100%;
     height: 32px;
     border: none;
-    background: #e2e2e2;
+    background: @border-color;
     padding-left: 20px;
 }
 
 .send-message-block_button-addmessage {
     height: 32px;
     margin-left: 10px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid @border-color;
 }
