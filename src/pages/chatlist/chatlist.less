@@ -1,0 +1,176 @@
+@border-color: #e2e2e2;
+@info-color: #f6f6f6;
+@messagelist-right-color: #e4edfd;
+@messagelist-left-color: #e7e7e7;
+@chatlist-block-color: #fbfbfb;
+@settings-chat-color: #808080;
+@chatname-color: #1e1e1e;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.page-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.block-left {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid @border-color;
+}
+.settings-block_profile {
+    min-height: 56px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    background: @info-color;
+}
+.settings-block_profile-link {
+    text-decoration: none;
+    color: @settings-chat-color;
+}
+
+.settings-block_search {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid @border-color;
+    padding: 0 10px 15px 10px;
+    background: @info-color;
+}
+.settings-block_search-input {
+    width: 100%;
+    height: 32px;
+    border: none;
+    background: @border-color;
+    padding: 0 10px;
+}
+
+.chatlist {
+    min-width: 400px;
+    background-color: @chatlist-block-color;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.chatlist-chatitem {
+    height: 100px;
+    border-bottom: 1px solid @border-color;
+    display: flex;
+ }
+
+.chatlist-chatitem_logo {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    border-radius: 50%;
+}
+
+.chatlist-chatitem_textcontainer {
+    width: 280px;
+    padding-top: 10px;
+}
+.chatlist-chatitem_title {
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.chatlist-chatitem_message {
+    color: @settings-chat-color;
+    overflow: hidden;
+    line-height: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.chatlist-chatitem_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+}
+.chatlist-chatitem_info-messagetime {
+    color: @settings-chat-color;
+    font-size: 12px;
+}
+
+.chatlist-chatitem_info-messagescount {
+    background-color: @border-color;
+    text-align: center;
+}
+
+.block-right {
+    background-color: @chatlist-block-color;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.profile-info {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    border-bottom: 1px solid @border-color;
+    background: @info-color;
+}
+.profile-info_logo {
+    padding: 0 10px 0 20px;
+}
+
+.profile-info_chatname {
+    width: 100%;
+    font-weight: bold;
+    color: @chatname-color;
+}
+.messagelist {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.messagelist_left {
+    background: @messagelist-left-color;
+    padding: 10px;
+    width: 400px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.messagelist_right {
+    background: @messagelist-right-color;
+    padding: 10px;
+    width: 400px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.send-message-block {
+    min-height: 56px;
+    background-color: @info-color;
+    border-top: 1px solid @border-color;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0;
+}
+.send-message-block_input-addmessage {
+    width: 100%;
+    height: 32px;
+    border: none;
+    background: @border-color;
+    padding-left: 20px;
+}
+
+.send-message-block_button-addmessage {
+    height: 32px;
+    margin-left: 10px;
+    border: 1px solid @border-color;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "messenger",
+  "version": "1.0.0",
+  "description": "application for exchange messages on websockets and handlebars",
+  "scripts": {
+    "start": "npm run build && node ./src/server.js",
+    "dev": "parcel --no-cache ./src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maslovich1985/middle.messenger.praktikum.yandex.git"
+  },
+  "author": "Alexey Maslov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maslovich1985/middle.messenger.praktikum.yandex/issues"
+  },
+  "homepage": "https://github.com/maslovich1985/middle.messenger.praktikum.yandex#readme",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "@parcel/config-default": "2.3.2",
+    "@parcel/transformer-less": "2.3.2",
+    "express": "4.17.3",
+    "parcel": "2.3.2"
+  },
+  "dependencies": {
+    "dotenv": "7.0.0"
+  }
+}

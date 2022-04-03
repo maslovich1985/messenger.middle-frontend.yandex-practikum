@@ -1,0 +1,31 @@
+@link-color: #1f1f1f;
+@menu-color: #ffffff;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+  background: #f8f8f8;
+}
+
+.menu {
+  display: flex;
+  background: @menu-color;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 820px;
+
+  .routes {
+    margin: 30px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: @link-color;
+    border-bottom: 1px solid transparent;
+  }
+}

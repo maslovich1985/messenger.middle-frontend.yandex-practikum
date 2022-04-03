@@ -1,0 +1,30 @@
+
+    {{#each chatList.chatlist}}
+        <div class="chatlist-chatitem">
+            <div class="chatlist-chatitem_logo">
+                <img src="../../../static/chat-logo.png" height="60px" width="60px" alt="chat-logo">
+            </div>
+
+            <div class="chatlist-chatitem_textcontainer">
+                <div class="chatlist-chatitem_title">
+                    {{title}}
+                </div>
+                <div class="chatlist-chatitem_message">
+                    {{message}}
+                </div>
+            </div>
+
+            <div class="chatlist-chatitem_info">
+                <time class="chatlist-chatitem_info-messagetime">
+                    {{time}}
+                </time>
+
+                {{#if hasNewMessages}}
+                    <div class="chatlist-chatitem_info-messagescount">
+                        {{messagecount}}
+                    </div>
+                {{/if}}
+            </div>
+
+        </div>
+    {{/each}}
