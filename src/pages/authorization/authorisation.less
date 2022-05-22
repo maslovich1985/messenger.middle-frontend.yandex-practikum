@@ -5,13 +5,13 @@ body {
   padding: 0;
 }
 
-.page-container {
+.form-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .password-form {
+  .authorisation-form {
     width: 280px;
     height: 380px;
     background: @menu-color;
@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #e2e2e2;
+    border: 1px solid @border-color;
     border-radius: 20px;
     box-shadow: 2px 2px 3px @border-color;
 
@@ -36,7 +36,24 @@ body {
       display: flex;
       flex-direction: column;
       width: 220px;
-      margin-bottom: 40px;
+      margin-bottom: 70px;
+    }
+  }
+
+  .nav-block {
+    display: flex;
+    justify-content: center;
+
+    &__link {
+      font-family: @fontFamily;
+      text-decoration: none;
+      color: @color-darkGrey;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid black;
+        color: black;
+      }
     }
   }
 
@@ -46,16 +63,16 @@ body {
     width: 220px;
     margin-bottom: 20px;
 
-    &__button {
+    .button-block__button {
       margin-bottom: 5px;
       height: @elementHeight;
-      border-radius: 20px;
-      border: 1px solid @border-color;
       font-family: @fontFamily;
       color: @color-darkGrey;
+      border-radius: 20px;
+      border: 1px solid @border-color;
 
       &:hover {
-        background: #e4edfd;
+        background: @button-hoveredColor;
         cursor: pointer;
       }
     }
