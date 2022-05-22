@@ -1,6 +1,6 @@
 # *Веб-приложение для обмена сообщениями!*
 
-## __Ссылка на pull request: [#2](https://github.com/maslovich1985/middle.messenger.praktikum.yandex/pull/2)__
+## __Ссылка на pull request: [#2](https://github.com/maslovich1985/middle.messenger.praktikum.yandex/pull/3)__
 
 ## Ссылка на страницу в netlify: <https://alexey-maslov-messenger.netlify.app/>
 
