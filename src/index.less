@@ -1,5 +1,4 @@
-@link-color: #1f1f1f;
-@menu-color: #ffffff;
+@import "utils/styles/styles.less";
 
 body {
   margin: 0;
@@ -11,21 +10,28 @@ body {
   flex-direction: column;
   height: 100vh;
   overflow-y: hidden;
-  background: #f8f8f8;
+  background: @menu-color;
 }
 
 .menu {
   display: flex;
-  background: @menu-color;
+  background: #fff;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 5px 5px 5px -5px #6e6e7e;
   min-width: 820px;
 
-  .routes {
+  a {
     margin: 30px 30px;
     font-size: 18px;
+    font-family: @fontFamily;
     text-decoration: none;
-    color: @link-color;
+    color: @color-darkGrey;
     border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+      color: #000;
+    }
   }
 }
