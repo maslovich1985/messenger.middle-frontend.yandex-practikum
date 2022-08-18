@@ -14,7 +14,7 @@ interface IInputField {
   regexp: string;
 }
 
-export class InputField extends Block<IInputField> {
+export class InputField extends Block {
   constructor(props: IInputField) {
     super({
       ...props,
@@ -28,16 +28,16 @@ export class InputField extends Block<IInputField> {
 
     // language=hbs
     return `
-        <div>
-            ${labelText ? '<label for={{inputName}} class="input-label">{{labelText}}</label>' : ''}
-            {{{ Input inputId="${inputId}"
-                      inputType="${inputType}"
-                      inputName="${inputName}"
-                      ${inputValue !== undefined ? `inputValue="${inputValue}"` : ''}
-                      ${inputPlaceholder !== undefined ? `inputPlaceholder="${inputPlaceholder}"` : ''}
-                      regexp="${regexp}"
-            }}}
-        </div>  
+      <div>
+        ${labelText ? '<label for={{inputName}} class="input-label">{{labelText}}</label>' : ''}
+        {{{ Input inputId="${inputId}"
+        inputType="${inputType}"
+        inputName="${inputName}"
+        ${inputValue !== undefined ? `inputValue="${inputValue}"` : ''}
+        ${inputPlaceholder !== undefined ? `inputPlaceholder="${inputPlaceholder}"` : ''}
+        regexp="${regexp}"
+        }}}
+      </div>
     `;
   }
 }
