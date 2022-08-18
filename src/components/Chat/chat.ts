@@ -15,13 +15,7 @@ export interface IChatProps {
   avatar: string;
 }
 
-interface IChat extends IChatProps {
-  events: {
-    click: Function;
-  };
-}
-
-export class Chat extends Block<IChat> {
+export class Chat extends Block {
   constructor(props: IChatProps) {
     super({
       ...props,
@@ -53,7 +47,6 @@ export class Chat extends Block<IChat> {
             <div class="chat-logo-block">
                 <img class="chat-logo-block__img" src={{avatar}} height="60px" width="60px" alt="logo {{title}}" />
             </div>
-
             <div class="message-container">
                 <div class="message-container__title">
                     {{title}}
@@ -62,12 +55,10 @@ export class Chat extends Block<IChat> {
                     {{message}}
                 </div>
             </div>
-
             <div class="chat-item-info">
                 <div class="chat-item-info__message-time">
                     {{time}}
                 </div>
-
                 <div class="chat-item-info__messages-count">
                     {{unreadMessages}}
                 </div>
