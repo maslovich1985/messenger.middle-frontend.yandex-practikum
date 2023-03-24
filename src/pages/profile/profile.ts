@@ -20,11 +20,7 @@ interface IProfileProps {
   avatar?: string;
 }
 
-interface IProfile extends IProfileProps {
-  onClick: Function;
-}
-
-export class ProfilePage extends Block<IProfile> {
+export class ProfilePage extends Block {
   constructor(props: IProfileProps) {
     super({
       ...props,
@@ -47,7 +43,9 @@ export class ProfilePage extends Block<IProfile> {
     );
     if (data) {
       UserController.updateProfile(data as IProfileData)
+      // eslint-disable-next-line no-alert
         .then(() => alert('Профиль успешно обновлен!'))
+      // eslint-disable-next-line no-alert
         .catch((error) => alert(`Ошибка выполнения запроса обновления профиля! ${error ? error.reason : ''}`));
     }
   }
@@ -59,7 +57,7 @@ export class ProfilePage extends Block<IProfile> {
     const secondName = !this.props.second_name ? undefined : `"${this.props.second_name}"`;
     const displayName = !this.props.display_name ? undefined : `"${this.props.display_name}"`;
     const phone = !this.props.phone ? undefined : `"${this.props.phone}"`;
-    const avatar = !this.props.avatar ? '"https://cdn.icon-icons.com/icons2/1371/PNG/512/batman_90804.png"' : `"${this.props.avatar}"`;
+    const avatar = !this.props.avatar ? '"https://previews.123rf.com/images/denizjdazel/denizjdazel1902/denizjdazel190200045/124841367-.jpg?fj=1"' : `"${this.props.avatar}"`;
 
     // language=hbs
     return `
@@ -67,28 +65,20 @@ export class ProfilePage extends Block<IProfile> {
             <div class="profile-settings">
                 <div class="profile-form">
                     <h2 class="profile-form__title">Настройки</h2>
-
                     <form class="profile-form__form">
                         <div class="input-block">
-
                             {{{ InputField inputValue=${email} labelText="Почта:" inputId="email-profile" inputType="email"
                                 inputName="email" regexp="${REGEXP_EMAIL}" }}}
-
                             {{{ InputField inputValue=${login} labelText="Логин:" inputId="login-profile" inputType="text"
                                 inputName="login" regexp="${REGEXP_LOGIN}" }}}
-
                             {{{ InputField inputValue=${firstName} labelText="Имя:" inputId="first_name-profile" inputType="text"
                                 inputName="first_name" regexp="${REGEXP_NAME}" }}}
-
                             {{{ InputField inputValue=${secondName} labelText="Фамилия:" inputId="second_name-profile" inputType="text"
                                 inputName="second_name" regexp="${REGEXP_NAME}" }}}
-
                             {{{ InputField inputValue=${displayName} labelText="Никнэйм:" inputId="display_name-profile" inputType="text"
                                 inputName="display_name" regexp="${REGEXP_NICKNAME}" }}}
-
                             {{{ InputField inputValue=${phone} labelText="Телефон:" inputId="phone-profile" inputType="tel"
                                 inputName="phone" regexp="${REGEXP_PHONE}" }}}
-
                         </div>
                         <div class="button-block">
                             {{{ Button buttonId="button-save-profile" label="Сохранить" onClick=onClick }}}
